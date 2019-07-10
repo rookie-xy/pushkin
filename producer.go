@@ -1,5 +1,7 @@
 package pushkin
 
+import "github.com/queueio/pushkin/core/t"
+
 type Producer struct {
 }
 
@@ -9,6 +11,6 @@ func NewProducer(config *ProducerConfig) (*Producer, error) {
 	}, nil
 }
 
-func (p *Producer) Publish() error {
+func (p *Producer) Publish(topics []string, message *t.Message) error {
 	return nil
 }
